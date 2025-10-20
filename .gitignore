@@ -1,0 +1,32 @@
+# Operating System
+.DS_Store
+Thumbs.db
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Backup files
+*.backup
+*-backup.*
+*-old.*
+
+# Documentation (if you want to exclude)
+# *.md
+
+# Node modules (if you add any build tools later)
+node_modules/
+
+# Environment variables (if you add any)
+.env
+.env.local

@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Pranay Kumar - Cybersecurity professional portfolio showcasing penetration testing, security audits, and cybersecurity projects">
+    <meta name="keywords" content="cybersecurity, penetration testing, security, portfolio, Pranay Kumar">
+    <meta name="author" content="Pranay Kumar">
+
+    <meta property="og:title" content="Pranay Kumar - Cybersecurity Portfolio">
+    <meta property="og:description" content="Explore my cybersecurity projects, certifications, and expertise">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSec Portfolio | Your Name</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/sketchy/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Code+Pro:wght@400;700&family=Permanent+Marker&family=Neucha&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loader-wrapper">
+        <div class="loader">
+            <span><span></span><span></span><span></span><span></span></span>
+            <div class="base">
+                <span></span>
+                <div class="face"></div>
+            </div>
+        </div>
+        <div class="longfazers">
+            <span></span><span></span><span></span><span></span>
+        </div>
+    </div>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand cyber-brand" href="#">P<span class="text-danger">K</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" style="color: white;" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifications">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<section id="home" class="hero-section">
+  <div class="container">
+    <div class="row align-items-center min-vh-100 py-5">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="hero-content">
+          <div class="hero-subtitle">Hello, I'm</div>
+          <h1 class="hero-title">
+            <span class="name-highlight">Pranay Kumar</span>
+          </h1>
+          <h2 class="hero-role">
+            <span class="typed-text"></span><span class="cursor">|</span>
+          </h2>
+          <p class="hero-description">
+            Passionate cybersecurity specialist focused on protecting digital assets 
+            through ethical hacking, penetration testing, and innovative security solutions.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary btn-lg smooth-btn">
+              <i class="fas fa-folder-open me-2"></i>View Projects
+            </a>
+            <a href="#contact" class="btn btn-outline-primary btn-lg smooth-btn">
+              <i class="fas fa-phone me-2"></i>Contact Me
+            </a>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/pranaykumar2" class="social-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/iamypranay" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://t.me/maskeduchiha" class="social-link" aria-label="Twitter">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="mailto:ypranaykumar1002@gmail.com" class="social-link" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="terminal-container">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-buttons">
+                <span class="terminal-btn red"></span>
+                <span class="terminal-btn yellow"></span>
+                <span class="terminal-btn green"></span>
+              </div>
+              <div class="terminal-title">terminal@turingstrike</div>
+            </div>
+            <div class="terminal-body">
+              <div class="terminal-line">
+                <span class="terminal-prompt">$</span>
+                <span class="terminal-command" id="command-text"></span>
+                <span class="terminal-cursor">|</span>
+              </div>
+              <div class="terminal-output" id="terminal-output"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="scroll-indicator">
+    <a href="#about" class="scroll-link">
+      <span class="scroll-text">Scroll Down</span>
+      <span class="scroll-icon">
+        <i class="fas fa-chevron-down"></i>
+      </span>
+    </a>
+  </div>
+</section>
+
+<section id="about" class="about-section py-5">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <h2 class="section-title">About Me</h2>
+      <div class="title-underline"></div>
+      <p class="section-subtitle">Passionate about cybersecurity and protecting digital assets</p>
+    </div>
+    
+    <div class="row align-items-center">
+      <div class="col-lg-5 mb-4 mb-lg-0">
+        <div class="about-image-container">
+          <img src="Preview.svg" alt="Profile" class="about-profile-img">
+          <div class="profile-glow-effect"></div>
+        </div>
+      </div>
+      
+      <div class="col-lg-7">
+        <div class="about-content">
+          <p class="about-text">
+            I am a dedicated <strong>cybersecurity specialist</strong> with a passion for ethical hacking, 
+            penetration testing, and digital forensics. My journey in cybersecurity began when I discovered 
+            how vulnerable our digital infrastructure can be, and I've committed myself to making the online 
+            world safer.
+          </p>
+          
+          <p class="about-text">
+            With a background in computer science and specialized training in cybersecurity, I approach 
+            security challenges with both technical expertise and creative problem-solving. I believe in 
+            the importance of understanding both offensive and defensive security measures.
+          </p>
+          
+          <div class="about-stats row mt-4">
+            <div class="col-6 col-md-3 mb-3">
+              <div class="stat-card">
+                <div class="stat-number">1+</div>
+                <div class="stat-label">Years Experience</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+              <div class="stat-card">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Projects</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+              <div class="stat-card">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Certifications</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="interests-section mt-4">
+            <h4 class="interests-heading">
+              Areas of Interest
+            </h4>
+            <div class="interests-grid">
+              <span class="interest-badge">
+                <i class="fas fa-bug me-1"></i>Penetration Testing
+              </span>
+              <span class="interest-badge">
+                <i class="fas fa-search me-1"></i>Digital Forensics
+              </span>
+              <span class="interest-badge">
+                <i class="fas fa-network-wired me-1"></i>Security Operations Center (SOC)
+              </span>
+              <span class="interest-badge">
+                <i class="fas fa-virus me-1"></i>Malware Analysis
+              </span>
+              <span class="interest-badge">
+                <i class="fas fa-cloud me-1"></i>Software Security
+              </span>
+              <span class="interest-badge">
+                <i class="fas fa-microchip me-1"></i>Intraday Stock Trading
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="display-5 border-bottom pb-2">Technical Skills</h2>
+                <p class="lead">My cybersecurity toolkit and expertise</p>
+            </div>
+            
+            <div class="skills-container">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100 skill-card">
+                            <div class="card-header bg-danger text-white">
+                                <h3><i class="fas fa-user-ninja"></i> Offensive Security</h3>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Penetration Testing
+                                        <div class="skill-level">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 85%"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Vulnerability Assessment
+                                        <div class="skill-level">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Web App Security
+                                        <div class="skill-level">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 75%"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="tools-section mt-3">
+                                    <h5>Tools:</h5>
+                                    <div class="tool-icons">
+                                        <span class="tool-icon" title="Metasploit"><img src="icons/metasploit.png" alt="Metasploit" width="45" height="45"></span>
+                                        <span class="tool-icon" title="Burp Suite"><img src="icons/burpsuite.png" alt="Burp Suite" width="45" height="45"></span>
+                                        <span class="tool-icon" title="Kali Linux"><img src="icons/kali.png" alt="Kali Linux" width="40" height="40"></span>
+                                        <span class="tool-icon" title="Wireshark"><img src="icons/wireshark.png" alt="Wireshark" width="40" height="40"></span>
+                                        <span class="tool-icon" title="Bettercap"><img src="icons/bettercap.png" alt="Bettercap" width="35" height="30"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100 skill-card">
+                            <div class="card-header bg-success text-white">
+                                <h3><i class="fas fa-shield-alt"></i> Defensive Security</h3>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Security Monitoring
+                                        <div class="skill-level">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 90%"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Incident Response
+                                        <div class="skill-level">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 75%"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Log Analysis
+                                        <div class="skill-level">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 85%"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="tools-section mt-3">
+                                    <h5>Tools:</h5>
+                                    <div class="tool-icons">
+                                        <span class="tool-icon" title="Splunk"><img src="icons/splunk.png" alt="Splunk" width="40" height="40"></span>
+                                        <span class="tool-icon" title="OSSEC"><img src="icons/ossec.png" alt="OSSEC" width="40" height="20"></span>
+                                        <span class="tool-icon" title="Snort"><img src="icons/snort.png" alt="Snort" width="35" height="35"></span>
+                                        <span class="tool-icon" title="firewall"><img src="icons/firewall.png" alt="Firewall" width="30" height="30"></span>
+                                        <span class="tool-icon" title="nessus"><img src="icons/nessus.png" alt="Nessus" width="30" height="30"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100 skill-card">
+                            <div class="card-header bg-primary text-white">
+                                <h3><i class="fas fa-code"></i> Programming</h3>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Java
+                                        <div class="skill-level">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 75%"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        C
+                                        <div class="skill-level">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 70%"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        SQL
+                                        <div class="skill-level">
+                                            <div class="progress">
+                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 75%"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="tools-section mt-3">
+                                    <h5>Additional Skills:</h5>
+                                    <div class="skill-tags">
+                                        <span class="badge bg-primary">Forensic Analysis</span>
+                                        <span class="badge bg-primary">Cryptography</span>
+                                        <span class="badge bg-primary">OSINT</span>
+                                        <span class="badge bg-primary">Database Administration</span>
+                                        <span class="badge bg-primary">Automation using n8n</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title">Projects</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Innovative solutions for cybersecurity challenges</p>
+            </div>
+            
+            <div class="projects-timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-marker">
+                        <div class="marker-circle">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="project-card-modern">
+                            <div class="project-number">01</div>
+                            <div class="project-icon-large">
+                                <i class="fa-solid fa-image"></i>
+                            </div>
+                            <h3 class="project-title-modern">Steg-Go</h3>
+                            <div class="project-category-badge">
+                                <span class="badge bg-danger">Image Steganography</span>
+                            </div>
+                            <p class="project-desc-modern">Image steganography tool that embeds hidden text, images, audio, video, documents within images using AES-256 algorithms, ensuring secure communication and data protection.</p>
+
+                            <div class="project-stats-grid">
+                                <div class="stat-box">
+                                    <i class="fas fa-clock"></i>
+                                    <span class="stat-value">Real-time</span>
+                                    <span class="stat-label">Data</span>
+                                </div>
+                                <div class="stat-box">
+                                    <img width="35" height="35" src="https://img.icons8.com/ios/50/accuracy--v1.png" alt="accuracy--v1"/>
+                                    <span class="stat-value">99%</span>
+                                    <span class="stat-label">Accuracy</span>
+                                </div>
+                                <div class="stat-box">
+                                    <i class="fa-solid fa-code"></i>
+                                    <span class="stat-value">Go</span>
+                                    <span class="stat-label">Language</span>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-stack-modern">
+                                <span class="tech-pill">AES-256</span>
+                                <span class="tech-pill">CLI & Web based</span>
+                                <span class="tech-pill">Steganography</span>
+                            </div>
+                            
+                            <div class="project-actions">
+                                <a href="https://steg-go.onrender.com/" class="btn-action primary">
+                                    <i class="fas fa-play"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/pranaykumar2/steg-go" class="btn-action secondary">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-marker">
+                        <div class="marker-circle">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="project-card-modern">
+                            <div class="project-number">02</div>
+                            <div class="project-icon-large">
+                                <i class="fa-solid fa-id-card"></i>
+                            </div>
+                            <h3 class="project-title-modern">Project IVS</h3>
+                            <div class="project-category-badge">
+                                <span class="badge bg-warning">DApp</span>
+                            </div>
+                            <p class="project-desc-modern">Secure, decentralized identity verification system using blockchain technology. Enables users to control and share their digital identities securely with organizations, enhancing privacy and reducing fraud.</p>
+                            <div class="project-stats-grid">
+                                <div class="stat-box">
+                                    <i class="fa-solid fa-user-shield"></i>
+                                    <span class="stat-value">99%</span>
+                                    <span class="stat-label">Secured</span>
+                                </div>
+                                <div class="stat-box">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <span class="stat-value">2</span>
+                                    <span class="stat-label">days to verify</span>
+                                </div>
+                                <div class="stat-box">
+                                    <i class="fa-solid fa-globe"></i>
+                                    <span class="stat-value">Decentralized</span>
+                                    <span class="stat-label">Network</span>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-stack-modern">
+                                <span class="tech-pill">Solidity</span>
+                                <span class="tech-pill">Ethereum</span>
+                                <span class="tech-pill">Smart Contracts</span>
+                                <span class="tech-pill">Web3.js</span>
+                            </div>
+                            
+                            <div class="project-actions">
+                                <a href="https://project-ivs.vercel.app/" class="btn-action primary">
+                                    <i class="fas fa-play"></i> Live Demo
+                                </a>
+                                <a href="#" class="btn-action secondary">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-marker">
+                        <div class="marker-circle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="project-card-modern">
+                            <div class="project-number">03</div>
+                            <div class="project-icon-large">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                            </div>
+                            <h3 class="project-title-modern">Real Time Market Insights & Stock Scanner</h3>
+                            <div class="project-category-badge">
+                                <span class="badge bg-success">Finance</span>
+                            </div>
+                            <p class="project-desc-modern">Comprehensive automated stock scanner for web applications. Detects real-time market trends and provides insights with detailed reports forwarded to stakeholders via telegram.</p>
+
+                            <div class="project-stats-grid">
+                                <div class="stat-box">
+                                    <i class="fas fa-list"></i>
+                                    <span class="stat-value">NIFTY</span>
+                                    <span class="stat-label">500</span>
+                                </div>
+                                <div class="stat-box">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span class="stat-value">Detail</span>
+                                    <span class="stat-label">Reports</span>
+                                </div>
+                                <div class="stat-box">
+                                    <i class="fas fa-tools"></i>
+                                    <span class="stat-value">N8N</span>
+                                    <span class="stat-label">Automation</span>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-stack-modern">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">N8N</span>
+                                <span class="tech-pill">Fundamental & Technical Analysis</span>
+                                <span class="tech-pill">Telegram API</span>
+                            </div>
+                            
+                            <div class="project-actions">
+                                <a href="https://t.me/balajiequities" class="btn-action primary">
+                                    <i class="fas fa-play"></i> Live Demo
+                                </a>
+                                <a href="#" class="btn-action secondary">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-marker">
+                        <div class="marker-circle">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="project-card-modern">
+                            <div class="project-number">04</div>
+                            <div class="project-icon-large">
+                                <i class="fa-solid fa-keyboard"></i>
+                            </div>
+                            <h3 class="project-title-modern">Keylogger</h3>
+                                    <div class="project-category-badge">
+                                        <span class="badge bg-danger">Malware</span>
+                                    </div>
+                            <p class="project-desc-modern">Lightweight keylogger for monitoring keystrokes on Login page and sends the keylogger data to a remote server using gmail</p>
+                            
+                            <div class="project-stats-grid">
+                                <div class="stat-box">
+                                    <i class="fas fa-feather"></i>
+                                    <span class="stat-value">Light</span>
+                                    <span class="stat-label">Weight</span>
+                                </div>
+                                <div class="stat-box">
+                                    <img width="35" height="35" src="https://img.icons8.com/ios/50/accuracy--v1.png" alt="accuracy--v1"/>
+                                    <span class="stat-value">95%</span>
+                                    <span class="stat-label">Accuracy</span>
+                                </div>
+                                <div class="stat-box">
+                                    <i class="fas fa-heartbeat"></i>
+                                    <span class="stat-value">Health</span>
+                                    <span class="stat-label">Monitor</span>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-stack-modern">
+                                <span class="tech-pill">NodeJS</span>
+                                <span class="tech-pill">Malware</span>
+                                <span class="tech-pill">User Awareness</span>
+                            </div>
+                            
+                            <div class="project-actions">
+                                <a href="#" class="btn-action primary">
+                                    <i class="fas fa-play"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/pranaykumar2/keylogger" class="btn-action secondary">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title">Achievements</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="achievement-stats-bar">
+                <div class="stat-bubble">
+                    <div class="bubble-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="bubble-content">
+                        <span class="bubble-number">4</span>
+                        <span class="bubble-label">Certifications</span>
+                    </div>
+                </div>
+                <div class="stat-bubble">
+                    <div class="bubble-icon"><i class="fas fa-fire"></i></div>
+                    <div class="bubble-content">
+                        <span class="bubble-number">1</span>
+                        <span class="bubble-label">In Progress</span>
+                    </div>
+                </div>
+                <div class="stat-bubble">
+                    <div class="bubble-icon"><i class="fas fa-star"></i></div>
+                    <div class="bubble-content">
+                        <span class="bubble-number">Intermediate</span>
+                        <span class="bubble-label">Level</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hex-grid-container">
+                <div class="hex-badge-wrapper" data-badge="1">
+                    <div class="badge-info-card">
+                        <div class="badge-header">
+                            <h3>SE Intern</h3>
+                            <span class="badge-level">Level 3</span>
+                        </div>
+                        <h4 class="badge-title">Software Engineer Intern</h4>
+                        <p class="badge-issuer"><i class="fas fa-building"></i> HackerRank</p>
+                        <p class="badge-description">Completed problem statements focused on software development and coding challenges.</p>
+                        <div class="badge-skills">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Data Structures</span>
+                            <span class="skill-tag">Algorithms</span>
+                        </div>
+                        <div class="badge-footer">
+                            <span class="badge-date"><i class="fas fa-calendar-check"></i> Nov 2024</span>
+                            <a href="https://www.hackerrank.com/certificates/iframe/8b70bfa55910" class="verify-btn"><i class="fas fa-check-circle"></i> Verify</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hex-badge-wrapper" data-badge="3">
+                    <div class="badge-info-card">
+                        <div class="badge-header">
+                            <h3>AWS</h3>
+                            <span class="badge-level">Level 1</span>
+                        </div>
+                        <h4 class="badge-title">AWS Cloud Practitioner</h4>
+                        <p class="badge-issuer"><i class="fas fa-building"></i> Amazon Web Services</p>
+                        <p class="badge-description">Foundational cloud skills and knowledge for AWS services.</p>
+                        <div class="badge-skills">
+                            <span class="skill-tag">Cloud Security</span>
+                            <span class="skill-tag">AWS Services</span>
+                            <span class="skill-tag">Infrastructure</span>
+                        </div>
+                        <div class="badge-footer">
+                            <span class="badge-date"><i class="fas fa-calendar-check"></i> July 2024</span>
+                            <a href="https://www.credly.com/earner/earned/badge/845fc4b7-7a75-43a9-bbff-15b0b5e1575b" class="verify-btn"><i class="fas fa-check-circle"></i> Verify</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hex-badge-wrapper" data-badge="2">
+                    <div class="badge-info-card">
+                        <div class="badge-header">
+                            <h3>Cambridge English</h3>
+                            <span class="badge-level">Level 1</span>
+                        </div>
+                        <h4 class="badge-title">Cambridge English: Preliminary</h4>
+                        <p class="badge-issuer"><i class="fas fa-building"></i> Cambridge Assessment English</p>
+                        <p class="badge-description">Basic English language skills for everyday communication.</p>
+                        <div class="badge-skills">
+                            <span class="skill-tag">Reading</span>
+                            <span class="skill-tag">Writing</span>
+                            <span class="skill-tag">Listening</span>
+                            <span class="skill-tag">Speaking</span>
+                        </div>
+                        <div class="badge-footer">
+                            <span class="badge-date"><i class="fas fa-calendar-check"></i> March 2022</span>
+                            <a href="https://drive.google.com/file/d/1cjWI_95B1YLFyJzK_oQpdqBtz1UUZor6/view?usp=drivesdk" class="verify-btn"><i class="fas fa-check-circle"></i> Verify</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hex-badge-wrapper" data-badge="4">
+                    <div class="badge-info-card in-progress-card">
+                        <div class="badge-header">
+                            <h3>CC</h3>
+                            <span class="badge-level in-progress-label">In Progress</span>
+                        </div>
+                        <h4 class="badge-title">Certified in cybersecurity</h4>
+                        <p class="badge-issuer"><i class="fas fa-building"></i> ISC2</p>
+                        <p class="badge-description">Advanced cybersecurity concepts including risk management, network security, and incident response.</p>
+                        <div class="badge-skills">
+                            <span class="skill-tag">Risk Management</span>
+                            <span class="skill-tag">Network Security</span>
+                            <span class="skill-tag">Incident Response</span>
+                        </div>
+                        <div class="progress-bar-wrapper">
+                            <div class="progress-bar-custom">
+                                <div class="progress-fill" style="width: 30%">
+                                    <span class="progress-text">Training: 30%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="badge-footer">
+                            <span class="badge-date"><i class="fas fa-hourglass-half"></i> Expected: Jan 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="display-5 border-bottom pb-2">Get In Touch</h2>
+                <p class="lead">Let's discuss cybersecurity opportunities</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card contact-card">
+                        <div class="card-body">
+                            <form id="contactForm">
+                                <div class="alert alert-success d-none" id="formSuccess">
+                                    <i class="fas fa-check-circle me-2"></i>Message sent successfully! I'll get back to you soon.
+                                </div>
+                                <div class="alert alert-danger d-none" id="formError">
+                                    <i class="fas fa-exclamation-circle me-2"></i>Oops! Something went wrong. Please try again.
+                                </div>
+                                
+                                <div class="form-group mb-3">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="name" name="from_name" placeholder="Enter your name" required>
+                                    <div class="form-text text-muted">How should I address you?</div>
+                                </div>
+                                
+                                <div class="form-group mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" name="from_email" placeholder="Enter your email" required>
+                                    <div class="form-text text-muted">Your email will never be shared.</div>
+                                </div>
+                                
+                                <div class="form-group mb-3">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <select class="form-control" id="subject" name="subject">
+                                        <option>Job Opportunity</option>
+                                        <option>Project Collaboration</option>
+                                        <option>Security Consultation</option>
+                                        <option>Speaking Engagement</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group mb-4">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="How can I help you?" required></textarea>
+                                </div>
+                                
+                                <div class="captcha-section mb-3">
+                                    <div class="security-check">
+                                        <label class="form-label">Security Check</label>
+                                        <div class="captcha-container">
+                                            <span id="captchaQuestion">What is 7 + 3?</span>
+                                            <input type="text" class="form-control captcha-input" id="captchaAnswer" placeholder="Answer" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-lg btn-primary" id="submitButton">
+                                        <i class="fas fa-paper-plane me-2"></i> 
+                                        <span class="btn-text">Send Message</span>
+                                        <span class="btn-spinner d-none">
+                                            <i class="fas fa-spinner fa-spin me-2"></i>Sending...
+                                        </span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <h4 class="mb-4">Alternative Ways to Connect</h4>
+                    <div class="connect-options">
+                        <a href="mailto:ypranaykumar1002@gmail.com" class="connect-option">
+                            <i class="fas fa-envelope"></i>
+                            <span>ypranaykumar1002@gmail.com</span>
+                        </a>
+                        <a href="https://linkedin.com/in/iamypranay" class="connect-option">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                        <a href="https://github.com/pranaykumar2" class="connect-option">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub Profile</span>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="modern-footer">
+        <div class="footer-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="footer-wave-path"></path>
+            </svg>
+        </div>
+        
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h4 class="footer-title">
+                            P<span style="color: rgb(255, 72, 0)">K</span>
+                        </h4>
+                        <p class="footer-text">
+                            Dedicated to making the digital world more secure, one system at a time. 
+                            Building robust security solutions for tomorrow's challenges.
+                        </p>
+                        <div class="footer-stats">
+                            <div class="footer-stat-item">
+                                <div class="stat-value">1+</div>
+                                <div class="stat-label1">Years Experience</div>
+                            </div>
+                            <div class="footer-stat-item">
+                                <div class="stat-value">5+</div>
+                                <div class="stat-label1">Projects</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-heading">Quick Links</h5>
+                        <ul class="footer-links">
+                            <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                            <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+                            <li><a href="#skills"><i class="fas fa-chevron-right"></i> Skills</a></li>
+                            <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                            <li><a href="#certifications"><i class="fas fa-chevron-right"></i> Certifications</a></li>
+                            <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-heading">Services</h5>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-bug"></i> Penetration Testing</a></li>
+                            <li><a href="#"><i class="fas fa-user-shield"></i> Security Consulting</a></li>
+                            <li><a href="#"><i class="fas fa-graduation-cap"></i> Security Awareness Training</a></li>
+                            <li><a href="#"><i class="fa-solid fa-robot"></i> Automation Solutions</a></li>
+                            <li><a href="#"><i class="fas fa-shield-alt"></i> Financial Consulting</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-heading">
+                            <i class="fab fa-spotify"></i> Relax & Listen
+                        </h5>
+                        <p class="footer-text" style="font-size: 0.9rem; margin-bottom: 1rem;">
+                            Take a break and enjoy some tunes while browsing!
+                        </p>
+                        <div id="spotify-embed-container" style="border-radius: 12px; overflow: hidden;">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">
+                            &copy; <span id="currentYear">2025</span> Pranay Kumar. All rights reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="terminal-mini">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-text">Available to hire?  <span class="text-success">Yes</span></span>
+                            <span class="terminal-blink">_</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
