@@ -289,9 +289,22 @@ a {
     transition: padding 0.3s;
 }
 
-.project-item:hover {
-    padding-left: 20px;
+.project-item::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: var(--text-color);
+    transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
+.project-item:hover::after {
+    width: 100%;
+}
+
+/* Scan line animation on hover */
 
 .project-link {
     display: flex;
