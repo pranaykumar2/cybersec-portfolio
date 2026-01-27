@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initCustomCursor();
   initMagneticElements();
+  initMobileMenu();
   initSpotifyPlayer();
   initDate();
 
@@ -107,4 +108,25 @@ function initSpotifyPlayer() {
 }
 
 function initDate() {
+}
+
+function initMobileMenu() {
+  const toggleBtn = document.querySelector('.mobile-menu-toggle');
+  const overlay = document.querySelector('.mobile-menu-overlay');
+  const closeBtn = document.querySelector('.mobile-menu-close');
+  const links = document.querySelectorAll('.mobile-link');
+
+  if (toggleBtn && overlay && closeBtn) {
+    toggleBtn.addEventListener('click', () => {
+      overlay.classList.add('active');
+    });
+    closeBtn.addEventListener('click', () => {
+      overlay.classList.remove('active');
+    });
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        overlay.classList.remove('active');
+      });
+    });
+  }
 }

@@ -131,6 +131,64 @@ a {
     width: 100%;
 }
 
+.mobile-menu-toggle {
+    display: none;
+    font-size: 24px;
+    z-index: 101;
+    cursor: pointer;
+}
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-color);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-menu-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+.mobile-link {
+    font-size: 32px;
+    font-family: var(--font-heading);
+    color: var(--text-color);
+}
+
+.resume-link {
+    font-size: 18px;
+    font-family: var(--font-body);
+    text-decoration: underline;
+    opacity: 0.7;
+    margin-top: 20px;
+}
+
 .hero-section {
     height: 100vh;
     display: flex;
@@ -762,6 +820,72 @@ a {
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .site-nav {
+        padding: 20px;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .grid-2-col {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-section {
+        padding-top: 80px;
+    }
+
+    .hero-text {
+        font-size: 12vw;
+    }
+
+    .hero-footer {
+        left: 20px;
+        bottom: 40px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .hero-footer a {
+        margin-left: 0 !important;
+    }
+
+    .projects-section,
+    .about-section,
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    .project-link {
+        font-size: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .project-cat {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .project-preview-img {
+        display: none;
+    }
+
     .project-grid {
         grid-template-columns: 1fr;
     }
@@ -769,5 +893,23 @@ a {
     .project-card {
         min-height: auto;
         padding: 20px;
+    }
+
+    .big-contact-link {
+        font-size: 10vw;
+        margin-bottom: 50px;
+    }
+
+    .big-contact-link i {
+        font-size: 6vw;
+    }
+
+    .cursor-dot,
+    .cursor-circle {
+        display: none;
+    }
+
+    * {
+        cursor: auto;
     }
 }
