@@ -119,13 +119,16 @@ function initMobileMenu() {
   if (toggleBtn && overlay && closeBtn) {
     toggleBtn.addEventListener('click', () => {
       overlay.classList.add('active');
+      toggleBtn.classList.add('hidden');
     });
     closeBtn.addEventListener('click', () => {
       overlay.classList.remove('active');
+      toggleBtn.classList.remove('hidden');
     });
     links.forEach(link => {
       link.addEventListener('click', () => {
         overlay.classList.remove('active');
+        toggleBtn.classList.remove('hidden');
       });
     });
   }

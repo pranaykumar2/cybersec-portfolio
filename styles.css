@@ -137,6 +137,12 @@ a {
     font-size: 24px;
     z-index: 101;
     cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.mobile-menu-toggle.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .mobile-menu-overlay {
@@ -180,6 +186,34 @@ a {
     font-size: 32px;
     font-family: var(--font-heading);
     color: var(--text-color);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.mobile-menu-overlay.active .mobile-link {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-menu-overlay.active .mobile-link:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.mobile-menu-overlay.active .mobile-link:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.mobile-menu-overlay.active .mobile-link:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.mobile-menu-overlay.active .mobile-link:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.mobile-menu-overlay.active .mobile-link:nth-child(5) {
+    transition-delay: 0.5s;
 }
 
 .resume-link {
