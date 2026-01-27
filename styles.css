@@ -98,6 +98,7 @@ a {
     width: 100%;
     z-index: 100;
     mix-blend-mode: difference;
+    transition: background 0.3s, backdrop-filter 0.3s;
 }
 
 .logo {
@@ -826,6 +827,13 @@ a {
 
     .site-nav {
         padding: 20px;
+        /* Glassmorphism Solid Background for Mobile */
+        background: rgba(17, 17, 17, 0.85);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        mix-blend-mode: normal;
+        /* Disable difference blend */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .desktop-menu {
