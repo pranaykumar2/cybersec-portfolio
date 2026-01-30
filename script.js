@@ -95,10 +95,10 @@ function initSpotifyPlayer() {
 
   if (container) {
     const iframe = document.createElement('iframe');
-    iframe.style.borderRadius = '0';
+    iframe.style.borderRadius = '12px';
     iframe.src = `https://open.spotify.com/embed/playlist/${randomPlaylist.uri.split(':')[2]}?utm_source=generator&theme=0`;
     iframe.width = '100%';
-    iframe.height = '80';
+    iframe.height = '152'; // Improved standard height
     iframe.frameBorder = '0';
     iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
     iframe.loading = 'lazy';
@@ -132,4 +132,19 @@ function initMobileMenu() {
       });
     });
   }
+}
+
+// Function to Copy Email
+function copyEmail() {
+  const emailText = document.getElementById('email-text').innerText;
+  navigator.clipboard.writeText(emailText).then(() => {
+    const trigger = document.querySelector('.email-clipboard-trigger');
+    trigger.classList.add('copied');
+
+    setTimeout(() => {
+      trigger.classList.remove('copied');
+    }, 2000); // Reset after 2s
+  }).catch(err => {
+    console.error('Failed to copy: ', err);
+  });
 }

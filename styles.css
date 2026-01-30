@@ -60,11 +60,12 @@ body {
 }
 
 body:hover .cursor-circle.active {
-    width: var(--cursor-hover-size);
-    height: var(--cursor-hover-size);
-    background-color: white;
+    width: var(--cursor-size);
+    height: var(--cursor-size);
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.8);
     mix-blend-mode: difference;
-    border-color: transparent;
+    transform: translate(-50%, -50%);
 }
 
 h1,
@@ -420,6 +421,22 @@ a {
     color: var(--text-dim);
 }
 
+/* Cyber Grid Footer */
+/* Stealth Footer */
+/* Contact Section (Original Restored) */
+.contact-section {
+    padding: 100px 0 40px;
+}
+
+.contact-header {
+    margin-bottom: 40px;
+}
+
+.contact-header h2 {
+    font-size: 14px;
+    color: var(--text-dim);
+}
+
 .big-contact-link {
     font-size: 8vw;
     font-weight: 700;
@@ -427,6 +444,7 @@ a {
     margin-bottom: 100px;
     border-bottom: 2px solid transparent;
     transition: border 0.3s;
+    color: var(--text-color);
 }
 
 .big-contact-link:hover {
@@ -474,17 +492,112 @@ a {
 
 .spotify-minimal {
     border: 1px solid #333;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
+    height: 75%;
+    min-height: 152px;
+    transition: all 0.3s ease;
 }
+
+.spotify-minimal:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cyber-hook-link {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 8vw;
+    line-height: 0.9;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+
+    /* Liquid Stroke Effect */
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    background: linear-gradient(to top, white 50%, transparent 50%);
+    background-size: 100% 202%;
+    background-position: 0% 100%;
+    transition: background-position 0.5s ease;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 768px) {
     .grid-2-col {
         grid-template-columns: 1fr;
     }
 
-    .footer-grid {
+    /* Cyber Grid Mobile */
+    .cyber-grid {
         grid-template-columns: 1fr;
+        border-right: 1px solid #333;
+    }
+
+    .cyber-cell {
+        border-right: none;
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .nav-cell,
+    .social-cell,
+    .vibe-cell,
+    .story-cell {
+        grid-column: span 1;
+    }
+
+    .hook-cell {
+        padding: 40px 20px;
+        min-height: 200px;
+    }
+
+    .cyber-hook-link {
+        font-size: 12vw;
+    }
+
+    .cyber-social-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .hero-text {
@@ -563,11 +676,27 @@ a {
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
     overflow: hidden;
+    z-index: 1;
+}
+
+.cert-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: white;
+    z-index: -1;
+    transition: height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .cert-card:hover {
-    background: white;
     border-color: white;
+}
+
+.cert-card:hover::before {
+    height: 100%;
 }
 
 .cert-top {
@@ -576,6 +705,7 @@ a {
     font-size: 12px;
     font-family: 'Fira Code', monospace;
     color: var(--text-dim);
+    transition: color 0.3s;
 }
 
 .cert-card:hover .cert-top {
@@ -850,12 +980,30 @@ a {
     background: transparent;
     text-transform: uppercase;
     letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-analyze::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: white;
+    z-index: -1;
+    transition: height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .btn-analyze:hover {
-    background: white;
     color: black;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.btn-analyze:hover::before {
+    height: 100%;
 }
 
 .btn-analyze i {
@@ -867,6 +1015,248 @@ a {
     margin-left: 10px;
 }
 
+/* Cyber Grid Footer */
+.cyber-footer-section {
+    padding: 0;
+    border-top: 1px solid #333;
+    margin-top: 100px;
+}
+
+.cyber-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-left: 1px solid #333;
+}
+
+.cyber-cell {
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 40px;
+    position: relative;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+}
+
+.cyber-cell.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Nav Cell - Span 2 columns */
+.nav-cell {
+    grid-column: span 2;
+}
+
+.cyber-label {
+    font-family: 'Fira Code', monospace;
+    font-size: 10px;
+    color: #666;
+    margin-bottom: 20px;
+    display: block;
+    letter-spacing: 1px;
+}
+
+/* Hook Cell */
+.hook-cell {
+    padding: 80px 40px;
+    transition: background 0.3s;
+    min-height: 300px;
+}
+
+.hook-cell:hover {
+    background: white;
+}
+
+.cyber-hook-link {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 8vw;
+    line-height: 0.9;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    display: block;
+    transition: color 0.3s;
+}
+
+.hook-cell:hover .cyber-hook-link {
+    color: black;
+}
+
+.cyber-hook-link i {
+    font-size: 4vw;
+    margin-left: 20px;
+    transform: rotate(-45deg);
+    transition: transform 0.3s;
+}
+
+.hook-cell:hover i {
+    transform: rotate(0);
+}
+
+/* Nav Cell */
+.cyber-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cyber-link {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    width: fit-content;
+}
+
+.cyber-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+}
+
+.cyber-link:hover::after {
+    width: 100%;
+}
+
+/* Socials */
+.stealth-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.stealth-social-link {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+
+/* SVG Styling */
+.stealth-social-link svg {
+    width: 22px;
+    height: 22px;
+    fill: rgba(255, 255, 255, 0.6);
+    /* Dim by default */
+    transition: all 0.3s ease;
+}
+
+.stealth-social-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    /* Subtle white glow */
+}
+
+.stealth-social-link:hover svg {
+    fill: white;
+    /* Bright white on hover */
+    transform: scale(1.1);
+}
+
+/* Terminal Cursor */
+.cursor-blink {
+    display: inline-block;
+    width: 10px;
+    height: 3px;
+    background: white;
+    margin-left: 5px;
+    animation: blink 1s step-end infinite;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Scramble Text "Dud" styling */
+.dud {
+    color: var(--text-dim);
+    opacity: 0.7;
+}
+
+/* Vibe */
+.stealth-vibe {
+    margin-top: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.stealth-vibe:hover {
+    opacity: 1;
+}
+
+.spotify-stealth iframe {
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Story/Vibe Cells */
+.cyber-story-link {
+    font-family: 'Fira Code', monospace;
+    color: white;
+    font-size: 14px;
+    border-bottom: 1px dashed white;
+    padding-bottom: 5px;
+    transition: all 0.3s;
+    align-self: flex-start;
+    text-decoration: none;
+}
+
+.cyber-story-link:hover {
+    background: white;
+    color: black;
+    padding: 5px 10px;
+    border-bottom: none;
+}
+
+/* Meta Cell */
+.meta-cell {
+    min-height: auto;
+    padding: 20px 40px;
+}
+
+.meta-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+    color: #666;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.meta-item span:last-child {
+    color: var(--text-dim);
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 0 20px;
@@ -874,12 +1264,10 @@ a {
 
     .site-nav {
         padding: 20px;
-        /* Glassmorphism Solid Background for Mobile */
         background: rgba(17, 17, 17, 0.85);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         mix-blend-mode: normal;
-        /* Disable difference blend */
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
@@ -895,8 +1283,18 @@ a {
         grid-template-columns: 1fr;
     }
 
+    /* Restored Footer Mobile */
     .footer-grid {
         grid-template-columns: 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .meta-content {
+        flex-direction: column;
+        gap: 20px;
     }
 
     .hero-section {
@@ -950,14 +1348,7 @@ a {
         padding: 20px;
     }
 
-    .big-contact-link {
-        font-size: 10vw;
-        margin-bottom: 50px;
-    }
-
-    .big-contact-link i {
-        font-size: 6vw;
-    }
+    /* Removed old footer/contact styles */
 
     .cursor-dot,
     .cursor-circle {
