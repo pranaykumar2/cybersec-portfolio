@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initSpotifyPlayer();
   initDate();
+  initNavbarScroll();
 
   const spans = document.querySelectorAll('.hero-text span');
   spans.forEach((span, index) => {
@@ -132,6 +133,29 @@ function initMobileMenu() {
       });
     });
   }
+}
+
+function initNavbarScroll() {
+  const navbar = document.querySelector('.site-nav');
+  let lastScroll = 0;
+  let ticking = false;
+
+  window.addEventListener('scroll', () => {
+    lastScroll = window.scrollY;
+
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        if (lastScroll > 100) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+        ticking = false;
+      });
+
+      ticking = true;
+    }
+  });
 }
 
 // Function to Copy Email
